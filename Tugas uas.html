@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas UAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">BYNNN CinemaHub</div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('homepage')" class="nav-link active">Home page</a></li>
+                    <li><a href="#" onclick="showPage('profile')" class="nav-link">Profile</a></li>
+                    <li><a href="#" onclick="showPage('transaction')" class="nav-link">Transaction</a></li>
+                    <li><a href="#" onclick="showPage('login')" class="nav-link">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="homepage" class="page active">
+            <h1>Welcome to my cinema</h1>
+            <div class="hero-section">
+                <p>
+                <The>Web programming is the process of creating applications that run in a web browser or server, using a variety of programming languages and technologies. The goal is to build and manage interactions between users and websites or web applications.</p>
+                <p>This project was created for the purpose of the final semester exam (UAS) for the web programming 1 courses</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Kategori yang Lengkap</h3>
+                    <p>Ribuan judul film dari berbagai masa dan genre, dengan informasi yang lengkap</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Rating & Review</h3>
+                    <p>Sistem rating dan review dari komunitas untuk membantu pilihan Anda</p>
+                </div>
+                <div class="feature-card">
+                    <h3>User friendly</h3>
+                    <p>Penggunaan yang mudah dan bisa di semua perangkat</p>
+                </div>
+            </div>
+
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <div class="movie-poster">🎬</div>
+                    <div class="movie-info">
+                        <div class="movie-details">
+                            <b>Title: The Godfather<br></b>
+                            Genre: Drama, Crime<br>
+                            Tahun: 1972<br>
+                            Rating: 9.2/10
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">🎬</div>
+                    <div class="movie-info">
+                        <div class="movie-details">
+                            <b>Title: The Dark Knight<br></b>
+                            Genre: Laga, Heroes, Fiksi ilmiah<br>
+                            Tahun: 2008<br>
+                            Rating: 9,2/10
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster">🎬</div>
+                    <div class="movie-info">
+                        <div class="movie-details">
+                            <B>Title: Schindler's List</B><br>
+                            Genre: History, perang, laga, Drama<br>
+                            Tahun: 1993<br>
+                            Rating: 9.0/10
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="page">
+            <h1>Profile</h1>
+            <h2>Tentang web ini</h2>
+            <p>This website is made using HTML, CSS and JavaScript for both free and paid streaming film, anime, big screen, drama and others services.</p>
+            
+            <h2>Fitur penting</h2>
+            <ul style="margin-left: 1.5rem; line-height: 2.5;">
+                <li><strong>Data film yang lengkap:</strong> ada ribuan film dari berbagai genre, negara, dan era</li>
+                <li><strong>Pencarian:</strong> Cari film berdasarkan judul, genre, tahun, atau aktor</li>
+                <li><strong>Rating dan review:</strong> Tulis dan nilai review film dari apa yang kalian nonton</li>
+                <li><strong>Watchlist Personal:</strong> Buat daftar film yang ingin ditonton</li>
+                <li><strong>Rekomendasi:</strong> Dapatkan rekomendasi film sesuai keinginan Anda</li>
+            </ul>
+        </div>
+
+        <div id="transaction" class="page">
+            <h1>Manajemen Film</h1>
+            
+            <h2>Tambah Film Baru</h2>
+            <form id="movieForm">
+                <div class="form-group">
+                    <label for="movieTitle">Judul Film:</label>
+                    <input type="text" id="movieTitle" name="movieTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieGenre">Genre:</label>
+                    <select id="movieGenre" name="movieGenre" required>
+                        <option value="">Pilih Genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="movieYear">Tahun Rilis:</label>
+                    <input type="number" id="movieYear" name="movieYear" min="1900" max="2025" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieRating">Rating (1-10):</label>
+                    <input type="number" id="movieRating" name="movieRating" min="1" max="10" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieDirector">Sutradara:</label>
+                    <input type="text" id="movieDirector" name="movieDirector" required>
+                </div>
+                <div class="form-group">
+                    <label for="movieDescription">Deskripsi:</label>
+                    <textarea id="movieDescription" name="movieDescription" rows="3" required></textarea>
+                </div>
+                <button type="submit">Tambah film</button>
+            </form>
+
+            <div id="successMessage" class="success" style="display: none;">
+                Film berhasil ditambahkan ke katalog!
+            </div>
+
+            <h2>Daftar Film</h2>
+            <table id="movieTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Genre</th>
+                        <th>Tahun</th>
+                        <th>Rating</th>
+                        <th>Sutradara</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>The Dark Knight</td>
+                        <td>Laga, Hero, Fiksi ilmiah</td>
+                        <td>2008</td>
+                        <td>9.2</td>
+                        <td>Christopher Nolan</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>The Godfather</td>
+                        <td>Mafia, laga, gangster, Romance</td>
+                        <td>1972</td>
+                        <td>9,2</td>
+                        <td>Francis Ford Coppola</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Schindler's List</td>
+                        <td>History, perang, laga, Drama</td>
+                        <td>1993</td>
+                        <td>9,0</td>
+                        <td>Steven Spielberg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="login" class="page">
+            <h1>Login</h1>
+            <div class="login-form">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <div id="usernameError" class="error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <div id="passwordError" class="error"></div>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="file.js"></script>
+</body>
+</html>
